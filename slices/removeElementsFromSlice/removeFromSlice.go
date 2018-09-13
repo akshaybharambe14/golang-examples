@@ -17,7 +17,6 @@ func deleteElements(s []int, p []int) []int {
 	deleteCnt := 0
 	for i := range p {
 		n, d := deleteElement(s, p[i]-deleteCnt)
-		fmt.Println("n: ", n)
 		if d {
 			deleteCnt++
 			s = n
@@ -37,23 +36,26 @@ func deleteElement(s []int, p int) ([]int, bool) {
 func sortAndRemoveDuplicate(s []int) []int {
 	sort.Ints(s)
 	n := make([]int, len(s))
-	fmt.Println(len(n))
-	last, cnt := 0, 0
+	last, cnt, started := 0, 0, false
+	fmt.Println("s: ", s)
 	for i := range s {
+		fmt.Println("n: ", n)
 		if i == 0 && !(s[i] < 0) {
 			last = s[i]
 			n[cnt] = s[i]
 			cnt++
+			started = true
 			continue
 		}
 
-		if s[i] == last || s[i] < 0 {
+		if ((s[i] == last) && started) || s[i] < 0 {
 			continue
 		}
 
 		last = s[i]
 		n[cnt] = s[i]
 		cnt++
+		started = true
 	}
 
 	return n[:cnt]
