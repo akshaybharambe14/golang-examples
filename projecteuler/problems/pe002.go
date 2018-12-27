@@ -10,15 +10,16 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 ==> 4613732
 */
 
-package main
+package problems
 
 import "fmt"
 
-const limit = 4e6
+// const fibLimit = 4e6
 
-func main() {
+// FibSeqSum -
+func FibSeqSum(fibLimit int) {
 	a, b, c, evenSum := 1, 1, 2, 0
-	for c < limit {
+	for c < fibLimit {
 		if checkEven(c) {
 			evenSum += c
 		}
@@ -27,7 +28,7 @@ func main() {
 		c = a + b
 	}
 
-	fmt.Print("Sum: ", evenSum)
+	fmt.Print("P002 - sum of the even-valued terms in Fibonacci sequence whose values do not exceed four million: ", evenSum)
 }
 
 func checkEven(i int) bool {

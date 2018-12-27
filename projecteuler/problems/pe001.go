@@ -9,22 +9,23 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 ==> 233168
 */
 
-package main
+package problems
 
 import (
 	"fmt"
 )
 
-const (
-	limit = 10
-)
+// const (
+// 	limit = 10
+// )
 
-func main() {
+// SumOfMultiples -
+func SumOfMultiples(limit int) {
 	sum := 0
 	for i := 0; i < limit; i++ {
 		if i%3 == 0 || i%5 == 0 {
 			sum = sum + i
 		}
 	}
-	fmt.Println("Sum: ", sum)
+	fmt.Println("P001 - sum of all the multiples of 3 or 5 below 1000: ", sum)
 }
