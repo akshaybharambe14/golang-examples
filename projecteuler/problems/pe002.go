@@ -12,7 +12,10 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 package problems
 
-import "fmt"
+import (
+	"fmt"
+	"golang-examples/projecteuler/utils"
+)
 
 // const fibLimit = 4e6
 
@@ -20,7 +23,7 @@ import "fmt"
 func FibSeqSum(fibLimit int) {
 	a, b, c, evenSum := 1, 1, 2, 0
 	for c < fibLimit {
-		if checkEven(c) {
+		if utils.CheckEven(c) {
 			evenSum += c
 		}
 		a = b
