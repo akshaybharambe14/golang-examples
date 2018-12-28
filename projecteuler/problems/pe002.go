@@ -31,7 +31,7 @@ func FibSeqSum(fibLimit int) {
 		c = a + b
 	}
 
-	fmt.Print("P002 - sum of the even-valued terms in Fibonacci sequence whose values do not exceed four million: ", evenSum)
+	fmt.Println("P002 - sum of the even-valued terms in Fibonacci sequence whose values do not exceed four million: ", evenSum)
 }
 
 func checkEven(i int) bool {
