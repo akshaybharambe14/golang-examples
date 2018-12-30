@@ -49,5 +49,5 @@ func SmallestDivisibleByRange(s, e int) {
 		d /= primes[i] // revert extra multiplied value
 		n *= d
 	}
-	fmt.Println(n)
+	fmt.Println("P003 - smallest positive number that is evenly divisible by all of the numbers from ", s, " to ", e, ": ", n)
 }

@@ -10,4 +10,5 @@ func main() {
 	problems.LargestPrimeFactor(600851475143) //p003
 	problems.LargestPalindromeFromDigit(3)    //p004
 	problems.SmallestDivisibleByRange(1, 20)  //p005
+	problems.DiffInSumOfSqAndSqOfSum(10)      //p006
 }
