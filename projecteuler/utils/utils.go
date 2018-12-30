@@ -39,6 +39,16 @@ func CheckNumberPalindrome(i int) bool {
 	return true
 }
 
+// CheckNumberPalindromeByReverse -
+func CheckNumberPalindromeByReverse(i int) bool {
+	r, j := 0, i
+	for i > 0 {
+		r = 10*r + i%10
+		i /= 10
+	}
+	return j == r
+}
+
 // CheckStringPalindrome -
 func CheckStringPalindrome(s string) bool {
 	l := len(s)
