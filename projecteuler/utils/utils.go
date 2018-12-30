@@ -92,3 +92,16 @@ func GetPositive(i int) int {
 	}
 	return i
 }
+
+// GetAllPrimeNumbersInRange -
+func GetAllPrimeNumbersInRange(s, e int) []int {
+	p, j := make([]int, e-s+1), 0
+	for i := s; i <= e; i++ {
+		if CheckPrime(i) {
+			p[j] = i
+			j++
+		}
+	}
+
+	return p[:j]
+}
