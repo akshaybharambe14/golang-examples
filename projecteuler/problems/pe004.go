@@ -12,8 +12,9 @@ package problems
 
 import (
 	"fmt"
-	"golang-examples/projecteuler/utils"
 	"math"
+
+	"github.com/akshaybharambe14/golang-examples/projecteuler/utils"
 )
 
 // LargestPalindromeFromDigit -

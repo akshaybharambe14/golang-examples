@@ -1,7 +1,7 @@
 package main
 
 import (
-	"golang-examples/projecteuler/problems"
+	"github.com/akshaybharambe14/golang-examples/projecteuler/problems"
 )
 
 func main() {

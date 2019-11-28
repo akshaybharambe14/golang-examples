@@ -12,7 +12,8 @@ package problems
 
 import (
 	"fmt"
-	"golang-examples/projecteuler/utils"
+
+	"github.com/akshaybharambe14/golang-examples/projecteuler/utils"
 )
 
 // FindPrimeNumberAtLocation - s is start position, p is required prime position
